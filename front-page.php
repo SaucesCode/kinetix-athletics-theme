@@ -151,8 +151,9 @@ $catalog_query = new WP_Query( array(
 <section class="kinetix-category-section">
     <div class="kinetix-container">
         <div class="kinetix-section-header kinetix-reveal">
-            <span class="header-eyebrow">EQUIPMENT & APPAREL DIVISIONS</span>
-            <h2 class="header-title">Performance Categories</h2>
+            <span class="header-eyebrow"><?php esc_html_e( 'EQUIPMENT DISCIPLINES', 'kinetix-fitness' ); ?></span>
+            <h2 class="header-title"><?php esc_html_e( 'Engineered Apparel & Strength Gear', 'kinetix-fitness' ); ?></h2>
+            <p class="header-desc"><?php esc_html_e( 'Built for rigorous barbell cycles, daily conditioning work, and rapid musculoskeletal recovery.', 'kinetix-fitness' ); ?></p>
         </div>
 
         <div class="category-bento-grid">
