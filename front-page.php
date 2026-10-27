@@ -158,7 +158,7 @@ $catalog_query = new WP_Query( array(
 
         <div class="category-bento-grid">
             <!-- Men's Training -->
-            <div class="cat-bento-card bento-span-7 kinetix-reveal delay-100" style="--bento-bg: url('<?php echo esc_url( get_template_directory_uri() . '/assets/images/cat-mens.jpg' ); ?>');">
+            <div class="cat-bento-card cat-bento-mens bento-span-7 kinetix-reveal delay-100" style="--bento-bg: url('<?php echo esc_url( get_template_directory_uri() . '/assets/images/cat-mens.jpg' ); ?>');">
                 <div class="cat-card-inner">
                     <div class="cat-info">
                         <span class="cat-pill">DIVISION 01</span>
@@ -173,7 +173,7 @@ $catalog_query = new WP_Query( array(
             </div>
 
             <!-- Women's Activewear -->
-            <div class="cat-bento-card bento-span-5 kinetix-reveal delay-200" style="--bento-bg: url('<?php echo esc_url( get_template_directory_uri() . '/assets/images/cat-womens.jpg' ); ?>');">
+            <div class="cat-bento-card cat-bento-womens bento-span-5 kinetix-reveal delay-200" style="--bento-bg: url('<?php echo esc_url( get_template_directory_uri() . '/assets/images/cat-womens.jpg' ); ?>');">
                 <div class="cat-card-inner">
                     <div class="cat-info">
                         <span class="cat-pill">DIVISION 02</span>
@@ -188,7 +188,7 @@ $catalog_query = new WP_Query( array(
             </div>
 
             <!-- Gear & Lifting Belts -->
-            <div class="cat-bento-card bento-span-5 kinetix-reveal delay-100" style="--bento-bg: url('<?php echo esc_url( get_template_directory_uri() . '/assets/images/cat-gear.jpg' ); ?>');">
+            <div class="cat-bento-card cat-bento-gear bento-span-5 kinetix-reveal delay-100" style="--bento-bg: url('<?php echo esc_url( get_template_directory_uri() . '/assets/images/cat-gear.jpg' ); ?>');">
                 <div class="cat-card-inner">
                     <div class="cat-info">
                         <span class="cat-pill">DIVISION 03</span>
@@ -203,7 +203,7 @@ $catalog_query = new WP_Query( array(
             </div>
 
             <!-- Supplements & Recovery -->
-            <div class="cat-bento-card bento-span-7 kinetix-reveal delay-200" style="--bento-bg: url('<?php echo esc_url( get_template_directory_uri() . '/assets/images/cat-recovery.jpg' ); ?>');">
+            <div class="cat-bento-card cat-bento-recovery bento-span-7 kinetix-reveal delay-200" style="--bento-bg: url('<?php echo esc_url( get_template_directory_uri() . '/assets/images/cat-recovery.jpg' ); ?>');">
                 <div class="cat-card-inner">
                     <div class="cat-info">
                         <span class="cat-pill">DIVISION 04</span>

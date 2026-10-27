@@ -731,9 +731,9 @@ img {
     flex-direction: column !important;
     text-decoration: none !important;
     background-color: var(--bg-surface) !important;
-    background-image: var(--bento-bg) !important;
     background-size: cover !important;
     background-position: center !important;
+    background-repeat: no-repeat !important;
     border: 1px solid var(--border-glass) !important;
     border-radius: 1.75rem !important;
     padding: 0.45rem !important;
@@ -746,7 +746,14 @@ img {
     min-height: 290px !important;
     width: 100% !important;
     box-sizing: border-box !important;
+    cursor: pointer;
 }
+
+/* Distinct Photography Backdrops */
+.cat-bento-mens { background-image: url('../images/cat-mens.jpg') !important; }
+.cat-bento-womens { background-image: url('../images/cat-womens.jpg') !important; }
+.cat-bento-gear { background-image: url('../images/cat-gear.jpg') !important; }
+.cat-bento-recovery { background-image: url('../images/cat-recovery.jpg') !important; }
 
 .cat-bento-card::before {
     content: '';
@@ -874,7 +881,8 @@ img {
     .cat-bento-card.bento-span-7,
     .cat-bento-card.bento-span-5,
     .cat-bento-card.bento-hero {
-        grid-column: span 1 !important;
+        grid-column: 1 / -1 !important;
+        width: 100% !important;
     }
 }
 
@@ -2249,7 +2257,10 @@ img {
 @media (max-width: 991px) {
     .kinetix-nav-links-wrap { display: none; }
     .kinetix-hamburger { display: flex; }
-    .bento-span-7, .bento-span-5 { grid-column: span 12; }
+    .bento-span-7, .bento-span-5, .cat-bento-card.bento-span-7, .cat-bento-card.bento-span-5, .cat-bento-card.bento-hero { 
+        grid-column: 1 / -1 !important; 
+        width: 100% !important; 
+    }
     .lookbook-inner { grid-template-columns: 1fr; }
     .tech-matrix-grid { grid-template-columns: repeat(2, 1fr); }
     .trust-grid { grid-template-columns: 1fr; }
