@@ -225,7 +225,7 @@ $catalog_query = new WP_Query( array(
         <!-- Catalog Header -->
         <div class="catalog-top-bar kinetix-reveal">
             <div>
-                <span class="header-eyebrow">EQUIPMENT ROSTER</span>
+                <span class="header-eyebrow">COMPETITION ROSTER</span>
                 <h2 class="header-title">The Complete Collection</h2>
             </div>
             <div class="catalog-counter-badge">

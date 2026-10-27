@@ -248,12 +248,46 @@
 </section>
 <section id="catalog" class="kinetix-catalog-section">
     <div class="kinetix-container">
-        <div class="kinetix-section-header">
-            <span class="header-eyebrow">COMPETITION ROSTER</span>
-            <h2 class="header-title">The Seasonal Drop Catalog</h2>
-            <p class="header-desc">Field-tested gear with direct 1-click Shop Pay and Apple Pay tokenized checkout.</p>
+        <!-- Catalog Header -->
+        <div class="catalog-top-bar kinetix-reveal">
+            <div>
+                <span class="header-eyebrow">COMPETITION ROSTER</span>
+                <h2 class="header-title">The Seasonal Drop Catalog</h2>
+                <p class="header-desc" style="color:var(--text-secondary); margin-top:0.4rem; font-size:0.9375rem;">Field-tested gear with direct 1-click Shop Pay and Apple Pay tokenized checkout.</p>
+            </div>
+            <div class="catalog-counter-badge">
+                <span id="kinetix-total-count">8</span> Items Available
+            </div>
         </div>
-        <div class="kinetix-product-grid">    <article class="kinetix-product-card kinetix-card-shell kinetix-reveal" data-category="Men&#039;s Training">
+
+        <!-- Filter Controls -->
+        <div class="catalog-filter-controls kinetix-reveal delay-100">
+            <!-- Category Tabs -->
+            <div class="catalog-cat-tabs" role="tablist">
+                <button type="button" class="tab-btn active" data-cat="all">All Gear (8)</button>
+                <button type="button" class="tab-btn" data-cat="men">Men's Apparel (3)</button>
+                <button type="button" class="tab-btn" data-cat="women">Women's Active (1)</button>
+                <button type="button" class="tab-btn" data-cat="gear">Strength &amp; Belts (2)</button>
+                <button type="button" class="tab-btn" data-cat="recovery">Recovery (2)</button>
+            </div>
+
+            <!-- Search & Sort Row -->
+            <div class="catalog-aux-row">
+                <div class="kinetix-search-input-wrap">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                    <input type="text" id="kinetix-search-input" placeholder="Search roster, fabrics, sizes..." aria-label="Search products">
+                </div>
+                <div class="kinetix-sort-wrap">
+                    <select id="kinetix-sort-select" aria-label="Sort products">
+                        <option value="featured">Sort: Featured</option>
+                        <option value="price_low">Price: Low to High</option>
+                        <option value="price_high">Price: High to Low</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="kinetix-products-grid kinetix-product-grid" id="kinetix-products-grid">    <article class="kinetix-product-card kinetix-card-shell kinetix-reveal" data-category="Men&#039;s Training">
         <div class="kinetix-card-inner">
             <div class="card-media-wrapper">
                 <div class="kinetix-photo-frame">

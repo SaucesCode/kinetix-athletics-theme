@@ -896,11 +896,284 @@ img {
     border-color: var(--border-highlight);
 }
 
-/* Products Grid */
-.kinetix-products-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(285px, 1fr));
-    gap: 2rem;
+/* Products Grid - 4 Columns Desktop Luxury Grid */
+.kinetix-products-grid,
+.kinetix-product-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 1.5rem !important;
+    width: 100% !important;
+    margin-top: 1.25rem;
+}
+
+@media (max-width: 1180px) {
+    .kinetix-products-grid,
+    .kinetix-product-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        gap: 1.25rem !important;
+    }
+}
+
+@media (max-width: 860px) {
+    .kinetix-products-grid,
+    .kinetix-product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 1rem !important;
+    }
+}
+
+@media (max-width: 520px) {
+    .kinetix-products-grid,
+    .kinetix-product-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.25rem !important;
+    }
+}
+
+/* Universal Card Shell Architecture */
+.kinetix-product-card,
+.kinetix-card-shell {
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid var(--border-glass);
+    border-radius: 1.5rem;
+    padding: 0.35rem;
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    transition: border-color 0.35s ease, transform 0.35s var(--ease-spring), box-shadow 0.35s ease;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.kinetix-product-card:hover,
+.kinetix-card-shell:hover {
+    border-color: var(--border-highlight);
+    transform: translateY(-4px);
+    box-shadow: 0 25px 60px -10px rgba(0, 0, 0, 0.7), 0 0 30px var(--accent-primary-glow);
+}
+
+/* Card Media Wrapper & Photo Frame */
+.card-media-wrapper,
+.kinetix-card-media-wrap {
+    position: relative;
+    background: #08111f;
+    border-bottom: 1px solid var(--border-glass);
+    overflow: hidden;
+    border-radius: calc(1.5rem - 0.35rem) calc(1.5rem - 0.35rem) 0 0;
+}
+
+.kinetix-photo-frame {
+    aspect-ratio: 4 / 5;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background: #08111f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.kinetix-product-photo,
+.kinetix-card-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: transform 0.65s var(--ease-spring), filter 0.5s ease;
+}
+
+.kinetix-card-shell:hover .kinetix-product-photo,
+.kinetix-card-shell:hover .kinetix-card-photo,
+.kinetix-product-card:hover .kinetix-card-photo {
+    transform: scale(1.05);
+    filter: contrast(1.05) brightness(1.02);
+}
+
+/* Card Badges */
+.card-badges-row,
+.kinetix-card-badges {
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+    display: flex;
+    gap: 0.35rem;
+    z-index: 6;
+    pointer-events: none;
+}
+
+.kinetix-badge,
+.badge-pill {
+    font-family: var(--font-mono);
+    font-size: 0.5625rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    padding: 0.25rem 0.6rem;
+    border-radius: 9999px;
+    background: rgba(14, 28, 49, 0.85);
+    color: var(--accent-primary);
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    text-transform: uppercase;
+}
+
+/* Card Body Content */
+.card-body-content,
+.kinetix-card-body {
+    padding: 1.15rem 1.15rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background: var(--bg-surface);
+    border-radius: 0 0 calc(1.5rem - 0.35rem) calc(1.5rem - 0.35rem);
+}
+
+.card-meta-line,
+.kinetix-card-meta-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.45rem;
+}
+
+.product-category,
+.kinetix-cat-name {
+    font-family: var(--font-mono);
+    font-size: 0.625rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 800;
+    color: var(--accent-primary);
+}
+
+.product-rating,
+.kinetix-rating-pill {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.6875rem;
+    color: var(--text-secondary);
+    font-family: var(--font-mono);
+}
+
+.product-rating svg,
+.kinetix-rating-pill svg {
+    color: var(--accent-primary);
+    fill: var(--accent-primary);
+}
+
+.product-rating strong {
+    color: var(--text-primary);
+    font-weight: 700;
+}
+
+.product-title,
+.kinetix-card-title {
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    font-weight: 800;
+    margin-bottom: 0.35rem;
+    line-height: 1.35;
+    color: var(--text-primary);
+    letter-spacing: -0.01em;
+}
+
+.product-title a,
+.kinetix-card-title a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.product-title a:hover,
+.kinetix-card-title a:hover {
+    color: var(--accent-primary);
+}
+
+.product-subtitle,
+.kinetix-card-subtitle {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    line-height: 1.45;
+    margin-bottom: 1.1rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.card-footer-action,
+.kinetix-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0.95rem;
+    border-top: 1px solid var(--border-glass);
+    margin-top: auto;
+    gap: 0.75rem;
+}
+
+.price-box,
+.kinetix-card-price {
+    display: flex;
+    align-items: baseline;
+    gap: 0.45rem;
+    font-family: var(--font-display);
+    font-size: 1.1875rem;
+    font-weight: 800;
+    color: var(--text-primary);
+}
+
+.sale-price,
+.kinetix-price-sale {
+    color: var(--accent-primary);
+    font-weight: 800;
+}
+
+.regular-price.strike,
+.kinetix-price-orig del {
+    color: var(--text-muted);
+    font-size: 0.8125rem;
+    text-decoration: line-through;
+    font-weight: 500;
+}
+
+.btn-card-add,
+.kinetix-btn-cart {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    background: var(--accent-primary);
+    color: var(--bg-deep);
+    border: none;
+    border-radius: 9999px;
+    padding: 0.5rem 1rem;
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(56, 189, 248, 0.25);
+    transition: transform 0.2s var(--ease-spring), box-shadow 0.2s ease, background-color 0.2s ease;
+    touch-action: manipulation;
+    white-space: nowrap;
+}
+
+.btn-card-add:hover,
+.kinetix-btn-cart:hover {
+    background: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(56, 189, 248, 0.4);
+}
+
+.btn-card-add:active,
+.kinetix-btn-cart:active {
+    transform: scale(0.96);
 }
 
 /* Card Styling with CAD Crosshairs & Glass Shine */
@@ -1911,9 +2184,10 @@ img {
         width: 100%;
     }
 
-    .kinetix-products-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.25rem;
+    .kinetix-products-grid,
+    .kinetix-product-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1.25rem !important;
     }
     .stage-athlete-card {
         height: 320px;
@@ -1947,7 +2221,8 @@ img {
         gap: 1.25rem;
     }
     .cat-graphic-icon { display: none; }
-    .kinetix-products-grid { grid-template-columns: 1fr; }
+    .kinetix-products-grid,
+    .kinetix-product-grid { grid-template-columns: 1fr !important; }
 
     .lookbook-inner { padding: 1.5rem 1.15rem; border-radius: 1.25rem; }
     .stage-athlete-card { height: 280px; }

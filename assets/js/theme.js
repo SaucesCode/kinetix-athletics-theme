@@ -183,7 +183,49 @@ document.addEventListener('DOMContentLoaded', () => {
     let debounceTimer = null;
 
     function fetchCatalog() {
-        if (!productGrid || typeof kinetixConfig === 'undefined') return;
+        if (!productGrid) return;
+
+        // Static Client-Side Fallback for GitHub Pages / HTML Showcases
+        if (typeof kinetixConfig === 'undefined' || !kinetixConfig.ajaxUrl) {
+            const cards = productGrid.querySelectorAll('.kinetix-product-card, .kinetix-card-shell');
+            let visibleCount = 0;
+            const q = searchQuery.toLowerCase();
+
+            cards.forEach(card => {
+                const cat = (card.getAttribute('data-category') || '').toLowerCase();
+                const title = (card.querySelector('.product-title, .kinetix-card-title')?.textContent || '').toLowerCase();
+                const sub = (card.querySelector('.product-subtitle, .kinetix-card-subtitle')?.textContent || '').toLowerCase();
+
+                let matchesCat = (activeCategory === 'all');
+                if (!matchesCat) {
+                    if (activeCategory === 'mens-training' || activeCategory === 'men') {
+                        matchesCat = cat.includes('men') && !cat.includes('women');
+                    } else if (activeCategory === 'womens-activewear' || activeCategory === 'women') {
+                        matchesCat = cat.includes('women');
+                    } else if (activeCategory === 'gym-gear-equipment' || activeCategory === 'gear') {
+                        matchesCat = cat.includes('gear') || cat.includes('belt');
+                    } else if (activeCategory === 'recovery-supplements' || activeCategory === 'recovery') {
+                        matchesCat = cat.includes('recovery');
+                    } else {
+                        matchesCat = cat.includes(activeCategory.toLowerCase());
+                    }
+                }
+
+                const matchesSearch = !q || title.includes(q) || sub.includes(q) || cat.includes(q);
+
+                if (matchesCat && matchesSearch) {
+                    card.style.display = '';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            if (totalCountEl) {
+                totalCountEl.textContent = visibleCount;
+            }
+            return;
+        }
 
         productGrid.style.opacity = '0.35';
         productGrid.style.filter = 'blur(4px)';
