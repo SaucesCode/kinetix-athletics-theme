@@ -39,6 +39,19 @@ It delivers a dual-engine architecture: WordPress drives lightning-fast editoria
 - Dynamic free shipping progress meter (e.g. *"Spend $22.00 more to unlock free express dispatch"*).
 - Instant size selector chips, quantity controllers, and direct tokenized Shop Pay checkout bridge.
 
+### 5. Autonomous SEO & Schema.org Rich Results Engine
+- **Schema.org JSON-LD Structured Data:**
+  - **`Organization` & `Brand`:** Canonical identity, logo, social links (Instagram, YouTube, X, Strava), and support desk contact points.
+  - **`WebSite` with `SearchAction`:** Google Sitelinks SearchBox query endpoint integration.
+  - **`BreadcrumbList`:** Google-compliant breadcrumb hierarchy across every single subpage and product.
+  - **`Product`, `Offer`, & `AggregateRating`:** Triggers Google Search rich snippets including gold review stars (4.9/5), real-time pricing, and "In Stock" availability badges.
+  - **`ItemList`:** Google carousel structured data for full product catalog collections.
+  - **`FAQPage`:** Interactive SERP accordion expanders for customer concierge FAQs.
+- **Open Graph & Twitter Cards:** Complete metadata for Facebook, LinkedIn, iMessage, and X (`summary_large_image`), including e-commerce product extensions (`product:price:amount`, `product:price:currency`, `product:availability`).
+- **Core Web Vitals Preconnect Hints:** Zero-delay DNS prefetch and preconnect tags for Google Fonts and Shopify CDN.
+- **Search Console & Bing Verification:** Native customizer fields for site verification tokens.
+- **Plugin Coexistence:** Gracefully yields to Yoast, Rank Math, SEOPress, or AIOSEO if installed, preventing duplicate tag conflicts.
+
 ---
 
 ## Multi-Page Flagship Templates
@@ -81,6 +94,7 @@ kinetix-fitness/
 ├── inc/
 │   ├── custom-post-types.php        # fitness_product CPT & taxonomies
 │   ├── customizer.php               # Live WordPress Customizer settings
+│   ├── seo.php                      # Autonomous Schema.org & Open Graph engine
 │   └── sample-data.php              # Automated athletic catalog population
 ├── 404.php                          # Custom 404 error page
 ├── archive-fitness_product.php      # Catalog archive template

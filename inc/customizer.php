@@ -129,6 +129,57 @@ function kinetix_customize_register( $wp_customize ) {
         'section'  => 'kinetix_hero_section',
         'type'     => 'textarea',
     ) );
+
+    // SECTION 4: Search Engine Optimization (SEO) & Social Graph
+    $wp_customize->add_section( 'kinetix_seo_section', array(
+        'title'    => __( 'SEO, Schema & Social Graph', 'kinetix-fitness' ),
+        'panel'    => 'kinetix_panel',
+        'priority' => 40,
+    ) );
+
+    $wp_customize->add_setting( 'kinetix_seo_meta_desc', array(
+        'default'           => '',
+        'sanitize_callback' => 'sanitize_textarea_field',
+    ) );
+    $wp_customize->add_control( 'kinetix_seo_meta_desc', array(
+        'label'       => __( 'Default Meta Description', 'kinetix-fitness' ),
+        'description' => __( 'Appears in Google SERP results for the homepage and default social shares (150-160 characters recommended).', 'kinetix-fitness' ),
+        'section'     => 'kinetix_seo_section',
+        'type'        => 'textarea',
+    ) );
+
+    $wp_customize->add_setting( 'kinetix_seo_twitter_handle', array(
+        'default'           => '@kinetixathletics',
+        'sanitize_callback' => 'sanitize_text_field',
+    ) );
+    $wp_customize->add_control( 'kinetix_seo_twitter_handle', array(
+        'label'       => __( 'Twitter / X Handle', 'kinetix-fitness' ),
+        'description' => __( 'Used for twitter:site and twitter:creator metadata cards.', 'kinetix-fitness' ),
+        'section'     => 'kinetix_seo_section',
+        'type'        => 'text',
+    ) );
+
+    $wp_customize->add_setting( 'kinetix_seo_google_verification', array(
+        'default'           => '',
+        'sanitize_callback' => 'sanitize_text_field',
+    ) );
+    $wp_customize->add_control( 'kinetix_seo_google_verification', array(
+        'label'       => __( 'Google Search Console Verification Token', 'kinetix-fitness' ),
+        'description' => __( 'Enter the content string from your google-site-verification meta tag.', 'kinetix-fitness' ),
+        'section'     => 'kinetix_seo_section',
+        'type'        => 'text',
+    ) );
+
+    $wp_customize->add_setting( 'kinetix_seo_bing_verification', array(
+        'default'           => '',
+        'sanitize_callback' => 'sanitize_text_field',
+    ) );
+    $wp_customize->add_control( 'kinetix_seo_bing_verification', array(
+        'label'       => __( 'Bing Webmaster Tools Verification Token', 'kinetix-fitness' ),
+        'description' => __( 'Enter the content string from your msvalidate.01 meta tag.', 'kinetix-fitness' ),
+        'section'     => 'kinetix_seo_section',
+        'type'        => 'text',
+    ) );
 }
 add_action( 'customize_register', 'kinetix_customize_register' );
 

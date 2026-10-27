@@ -9,13 +9,14 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-define( 'KINETIX_VERSION', '1.2.0' );
+define( 'KINETIX_VERSION', '1.3.0' );
 define( 'KINETIX_DIR', get_template_directory() );
 define( 'KINETIX_URI', get_template_directory_uri() );
 
 // Core Includes
 require_once KINETIX_DIR . '/inc/custom-post-types.php';
 require_once KINETIX_DIR . '/inc/customizer.php';
+require_once KINETIX_DIR . '/inc/seo.php';
 require_once KINETIX_DIR . '/inc/sample-data.php';
 
 /**
