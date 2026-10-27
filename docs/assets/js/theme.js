@@ -48,6 +48,20 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // 2.5 Header Scroll Elevation
+    const headerWrap = document.querySelector('.kinetix-header-wrap');
+    if (headerWrap) {
+        const onScroll = () => {
+            if (window.scrollY > 20) {
+                headerWrap.classList.add('scrolled');
+            } else {
+                headerWrap.classList.remove('scrolled');
+            }
+        };
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+    }
+
     // 3. Search Quick Scroll
     const searchBtn = document.getElementById('kinetix-search-btn');
     const searchInput = document.getElementById('kinetix-search-input');
@@ -172,12 +186,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 8. Live Catalog AJAX Filters & Search
     const productGrid = document.getElementById('kinetix-products-grid');
-    const catTabs = document.querySelectorAll('.catalog-cat-tabs .tab-btn');
+    const catTabs = document.querySelectorAll('.catalog-cat-tabs .tab-btn, .shop-filter-pills .shop-filter-pill, .shop-filter-pills a');
     const sortSelect = document.getElementById('kinetix-sort-select');
     const searchClear = document.getElementById('kinetix-search-clear');
     const totalCountEl = document.getElementById('kinetix-total-count');
 
-    let activeCategory = 'all';
+    const urlParams = new URLSearchParams(window.location.search);
+    const initialCat = urlParams.get('cat') || urlParams.get('category');
+    let activeCategory = initialCat || 'all';
     let activeSort = 'featured';
     let searchQuery = '';
     let debounceTimer = null;
@@ -268,13 +284,32 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     catTabs.forEach(tab => {
-        tab.addEventListener('click', () => {
+        tab.addEventListener('click', (e) => {
+            if (tab.tagName === 'A') e.preventDefault();
             catTabs.forEach(t => t.classList.remove('active'));
             tab.classList.add('active');
-            activeCategory = tab.getAttribute('data-cat');
+            activeCategory = tab.getAttribute('data-cat') || 'all';
             fetchCatalog();
         });
     });
+
+    // Auto-select tab if query parameter was supplied
+    if (initialCat && catTabs.length) {
+        catTabs.forEach(t => {
+            const dataCat = t.getAttribute('data-cat');
+            if (dataCat === initialCat || 
+               (initialCat.includes('men') && !initialCat.includes('women') && (dataCat === 'men' || dataCat === 'mens-training')) ||
+               (initialCat.includes('women') && (dataCat === 'women' || dataCat === 'womens-activewear')) ||
+               (initialCat.includes('gear') && (dataCat === 'gear' || dataCat === 'gym-gear-equipment'))) {
+                t.classList.add('active');
+            } else {
+                t.classList.remove('active');
+            }
+        });
+        if (productGrid) {
+            setTimeout(fetchCatalog, 60);
+        }
+    }
 
     if (sortSelect) {
         sortSelect.addEventListener('change', (e) => {

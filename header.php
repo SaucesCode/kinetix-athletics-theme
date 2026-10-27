@@ -67,11 +67,11 @@
                 else :
                 ?>
                 <ul class="kinetix-nav-list">
-                    <li><a href="<?php echo esc_url( home_url( '/shop/' ) ); ?>" class="nav-link"><?php esc_html_e( 'Shop', 'kinetix-fitness' ); ?></a></li>
-                    <li><a href="<?php echo esc_url( home_url( '/technology/' ) ); ?>" class="nav-link"><?php esc_html_e( 'Fabrics', 'kinetix-fitness' ); ?></a></li>
+                    <li><a href="<?php echo esc_url( home_url( '/shop/?cat=mens-training' ) ); ?>" class="nav-link"><?php esc_html_e( 'Men', 'kinetix-fitness' ); ?></a></li>
+                    <li><a href="<?php echo esc_url( home_url( '/shop/?cat=womens-activewear' ) ); ?>" class="nav-link"><?php esc_html_e( 'Women', 'kinetix-fitness' ); ?></a></li>
+                    <li><a href="<?php echo esc_url( home_url( '/shop/?cat=gym-gear-equipment' ) ); ?>" class="nav-link"><?php esc_html_e( 'Gear & Belts', 'kinetix-fitness' ); ?></a></li>
                     <li><a href="<?php echo esc_url( home_url( '/lookbook/' ) ); ?>" class="nav-link"><?php esc_html_e( 'Lookbook', 'kinetix-fitness' ); ?></a></li>
-                    <li><a href="<?php echo esc_url( home_url( '/sizing/' ) ); ?>" class="nav-link"><?php esc_html_e( 'Size Guide', 'kinetix-fitness' ); ?></a></li>
-                    <li><a href="<?php echo esc_url( home_url( '/about/' ) ); ?>" class="nav-link"><?php esc_html_e( 'About', 'kinetix-fitness' ); ?></a></li>
+                    <li><a href="<?php echo esc_url( home_url( '/sizing/' ) ); ?>" class="nav-link"><?php esc_html_e( 'Size Protocol', 'kinetix-fitness' ); ?></a></li>
                     <li><a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="nav-link"><?php esc_html_e( 'Support', 'kinetix-fitness' ); ?></a></li>
                 </ul>
                 <?php endif; ?>
@@ -104,12 +104,12 @@
     <!-- Mobile Navigation Overlay -->
     <div id="kinetix-mobile-overlay" class="kinetix-mobile-nav" aria-hidden="true">
         <ul class="mobile-links-list">
-            <li><a href="<?php echo esc_url( home_url( '/shop/' ) ); ?>"><?php esc_html_e( 'Shop All Products', 'kinetix-fitness' ); ?></a></li>
-            <li><a href="<?php echo esc_url( home_url( '/technology/' ) ); ?>"><?php esc_html_e( 'Fabric & Materials', 'kinetix-fitness' ); ?></a></li>
+            <li><a href="<?php echo esc_url( home_url( '/shop/?cat=mens-training' ) ); ?>"><?php esc_html_e( 'Men\'s Apparel', 'kinetix-fitness' ); ?></a></li>
+            <li><a href="<?php echo esc_url( home_url( '/shop/?cat=womens-activewear' ) ); ?>"><?php esc_html_e( 'Women\'s Activewear', 'kinetix-fitness' ); ?></a></li>
+            <li><a href="<?php echo esc_url( home_url( '/shop/?cat=gym-gear-equipment' ) ); ?>"><?php esc_html_e( 'Gear & Hardware', 'kinetix-fitness' ); ?></a></li>
             <li><a href="<?php echo esc_url( home_url( '/lookbook/' ) ); ?>"><?php esc_html_e( 'Athlete Lookbook & Drops', 'kinetix-fitness' ); ?></a></li>
-            <li><a href="<?php echo esc_url( home_url( '/sizing/' ) ); ?>"><?php esc_html_e( 'Size & Fit Guide', 'kinetix-fitness' ); ?></a></li>
-            <li><a href="<?php echo esc_url( home_url( '/about/' ) ); ?>"><?php esc_html_e( 'About Kinetix', 'kinetix-fitness' ); ?></a></li>
-            <li><a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>"><?php esc_html_e( 'Customer Support & Exchanges', 'kinetix-fitness' ); ?></a></li>
+            <li><a href="<?php echo esc_url( home_url( '/sizing/' ) ); ?>"><?php esc_html_e( 'Size Protocol & Measurements', 'kinetix-fitness' ); ?></a></li>
+            <li><a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>"><?php esc_html_e( 'Customer Support & Help', 'kinetix-fitness' ); ?></a></li>
         </ul>
         <div class="mobile-nav-note">
             <span>Shopify 256-bit Encrypted Checkout Protection</span>
