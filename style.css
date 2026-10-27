@@ -1,0 +1,16 @@
+/*
+Theme Name: Kinetix Athletics
+Theme URI: https://kinetix-athletics.com
+Author: Kinetix Performance Lab
+Author URI: https://kinetix-athletics.com
+Description: High-performance e-commerce fitness brand theme for WordPress with native Shopify Buy Button and Storefront API compatibility. Features slide-out cart drawer with free shipping progress meter, swatch selectors, lookbook hot spots, technical fabric specifications, and dual-platform Shopify OS 2.0 readiness.
+Version: 1.2.0
+Requires at least: 6.4
+Requires PHP: 8.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: kinetix-fitness
+Tags: e-commerce, fitness, apparel, custom-colors, custom-logo, custom-menu, featured-images, full-width-template, theme-options, translation-ready
+*/
+
+/* Core CSS resets and variables are loaded in assets/css/theme.css */

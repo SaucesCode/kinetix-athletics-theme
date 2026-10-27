@@ -1,0 +1,27 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "Kinetix Athletics",
+    "theme_version": "1.0.0",
+    "theme_author": "Kinetix Performance Lab",
+    "theme_documentation_url": "https://kinetix-athletics.com",
+    "theme_support_url": "https://kinetix-athletics.com"
+  },
+  {
+    "name": "Brand Colors",
+    "settings": [
+      {
+        "type": "color",
+        "id": "color_bg",
+        "label": "Background Color",
+        "default": "#f8f9fb"
+      },
+      {
+        "type": "color",
+        "id": "color_accent",
+        "label": "Athletic Blue Accent Color",
+        "default": "#0066ff"
+      }
+    ]
+  }
+]
