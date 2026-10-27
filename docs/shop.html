@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Shop All Products &amp; Gear &middot; Kinetix Athletics</title>
+    <meta name="description" content="High-performance athletic apparel, 10mm steerhide powerlifting belts, and circular-knit compression wear. Dual-platform Shopify checkout.">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="Kinetix Athletics">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Shop All Products &amp; Gear &middot; Kinetix Athletics">
+    <meta property="og:description" content="High-performance athletic apparel, 10mm steerhide powerlifting belts, and circular-knit compression wear.">
+    <meta property="og:image" content="assets/images/hero-athlete.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="900">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@kinetixathletics">
+    <meta name="twitter:title" content="Shop All Products &amp; Gear &middot; Kinetix Athletics">
+    <meta name="twitter:description" content="High-performance athletic apparel, 10mm steerhide powerlifting belts, and circular-knit compression wear.">
+    <meta name="twitter:image" content="assets/images/hero-athlete.jpg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="stylesheet" href="assets/css/cart-drawer.css">
+</head>
+<body class="kinetix-body">
+
+<a class="skip-link screen-reader-text" href="#kinetix-main-content">Skip to content</a>
+
+<!-- Announcement Bar -->
+<aside class="kinetix-ticker-bar" role="complementary" aria-label="Announcement">
+    <div class="kinetix-container ticker-inner">
+        <span class="ticker-badge">DISPATCH</span>
+        <div class="ticker-marquee-text">
+            Complimentary express delivery on domestic orders over $75 &middot; Use code FIRSTDROP at checkout
+        </div>
+        <button type="button" class="ticker-close" aria-label="Close banner" onclick="this.closest('.kinetix-ticker-bar').style.display='none'">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+    </div>
+</aside>
+
+<!-- Performance Fluid Island Navbar -->
+<header id="kinetix-site-header" class="kinetix-header-wrap">
+    <div class="kinetix-container">
+        <nav class="kinetix-navbar" aria-label="Main Navigation">
+            <!-- Brand Logo -->
+            <div class="kinetix-brand-area">
+                <a href="index.html" class="kinetix-logo" rel="home">
+                    <span class="logo-mark">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                    </span>
+                    <span class="logo-text">KINETIX</span>
+                    <span class="logo-sub">LAB</span>
+                </a>
+            </div>
+
+            <!-- Nav Links -->
+            <div class="kinetix-nav-links-wrap">
+                <ul class="kinetix-nav-list">
+                    <li><a href="shop.html" class="nav-link active">Shop</a></li>
+                    <li><a href="technology.html" class="nav-link ">Fabrics</a></li>
+                    <li><a href="lookbook.html" class="nav-link ">Lookbook</a></li>
+                    <li><a href="sizing.html" class="nav-link ">Size Guide</a></li>
+                    <li><a href="about.html" class="nav-link ">About</a></li>
+                    <li><a href="contact.html" class="nav-link ">Support</a></li>
+                </ul>
+            </div>
+
+            <!-- Actions: Bag Trigger & Mobile Menu -->
+            <div class="kinetix-header-actions">
+                <a href="shop.html" class="kinetix-icon-btn" aria-label="Search catalog">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                </a>
+
+                <!-- Shopping Bag Button -->
+                <button type="button" class="kinetix-bag-btn" id="kinetix-open-bag" aria-label="View shopping bag">
+                    <span class="bag-icon-circle">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                    </span>
+                    <span class="bag-label">Bag</span>
+                    <span class="bag-count-badge" id="kinetix-cart-count">0</span>
+                </button>
+
+                <!-- Mobile Menu Button -->
+                <button type="button" class="kinetix-hamburger" id="kinetix-mobile-btn" aria-label="Toggle navigation">
+                    <span class="h-bar top"></span>
+                    <span class="h-bar bottom"></span>
+                </button>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Mobile Navigation Overlay -->
+    <div id="kinetix-mobile-overlay" class="kinetix-mobile-nav" aria-hidden="true">
+        <ul class="mobile-links-list">
+            <li><a href="shop.html">Shop All Products</a></li>
+            <li><a href="technology.html">Fabric & Materials</a></li>
+            <li><a href="lookbook.html">Athlete Lookbook & Drops</a></li>
+            <li><a href="sizing.html">Size & Fit Guide</a></li>
+            <li><a href="about.html">About Kinetix</a></li>
+            <li><a href="contact.html">Customer Support & Exchanges</a></li>
+        </ul>
+        <div class="mobile-nav-note">
+            <span>Shopify 256-bit Encrypted Checkout Protection</span>
+        </div>
+    </div>
+</header>
+
+<main id="kinetix-main-content" class="kinetix-main">
+    
+<div class="kinetix-shop-page">
+    <div class="kinetix-container">
+        <nav class="kinetix-breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html">Home</a>
+            <span class="sep">/</span>
+            <span class="current">Shop Catalog</span>
+        </nav>
+        <header class="kinetix-shop-header kinetix-reveal">
+            <div class="page-hero-eyebrow">
+                <span class="eyebrow-kicker">DIVISION SPEC 2026</span>
+                <span class="eyebrow-divider">/</span>
+                <span class="eyebrow-meta">FULL ROSTER</span>
+            </div>
+            <h1 class="shop-header-title">The Complete Collection</h1>
+            <p class="shop-header-desc">
+                Engineered competition apparel, circular-knit compression, tournament-grade steerhide belts, and athlete recovery formulas.
+            </p>
+        </header>
+
+        <div class="shop-controls-bar kinetix-reveal">
+            <div class="shop-filter-pills">
+                <a href="shop.html" class="shop-filter-pill active">All Gear</a>
+                <a href="shop.html" class="shop-filter-pill">Men's Training</a>
+                <a href="shop.html" class="shop-filter-pill">Women's Active</a>
+                <a href="shop.html" class="shop-filter-pill">Belts & Equipment</a>
+                <a href="shop.html" class="shop-filter-pill">Recovery</a>
+            </div>
+            <span class="catalog-count-badge">8 Products Available</span>
+        </div>
+
+        <div class="shop-catalog-grid">
+            <div class="kinetix-product-grid">    <article class="kinetix-product-card kinetix-card-shell kinetix-reveal" data-category="Men&#039;s Training">
+        <div class="kinetix-card-inner">
+            <div class="card-media-wrapper">
+                <div class="kinetix-photo-frame">
+                    <img src="assets/images/product-velocity-tee.jpg" alt="VELOCITY Seamless Compression Tee" class="kinetix-card-photo" loading="lazy">
+                    <div class="photo-ambient-vignette"></div>
+                    <div class="card-cad-crosshair ch-tl">+</div>
+                    <div class="card-cad-crosshair ch-tr">+</div>
+                    <div class="card-cad-crosshair ch-bl">+</div>
+                    <div class="card-cad-crosshair ch-br">+</div>
+                </div>
+                <div class="card-badges-row">
+                                            <span class="kinetix-badge">BESTSELLER</span>
+                                    </div>
+            </div>
+            <div class="card-body-content">
+                <div class="card-meta-line">
+                    <span class="product-category">Men&#039;s Training</span>
+                    <span class="product-rating">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="#38bdf8"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <strong>4.9</strong>
+                        <span>(184)</span>
+                    </span>
+                </div>
+                <h3 class="product-title">VELOCITY Seamless Compression Tee</h3>
+                <p class="product-subtitle">Grade-2 thoracic compression &middot; Zero friction flatlock seams</p>
+                <div class="card-footer-action">
+                    <div class="price-box">
+                                                    <span class="sale-price">$52.00</span>
+                            <span class="regular-price strike">$68.00</span>
+                                            </div>
+                    <button type="button" class="btn-card-add kinetix-add-to-cart-trigger"
+                        data-product-id="velocity-tee"
+                        data-title="VELOCITY Seamless Compression Tee"
+                        data-price="52.00"
+                        data-size="S"
+                        data-color="Onyx Black">
+                        <span>Add</span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </article>
+        <article class="kinetix-product-card kinetix-card-shell kinetix-reveal" data-category="Women&#039;s Activewear">
+        <div class="kinetix-card-inner">
+            <div class="card-media-wrapper">
+                <div class="kinetix-photo-frame">
+                    <img src="assets/images/product-aura-leggings.jpg" alt="AURA High-Rise Ribbed Leggings" class="kinetix-card-photo" loading="lazy">
+                    <div class="photo-ambient-vignette"></div>
+                    <div class="card-cad-crosshair ch-tl">+</div>
+                    <div class="card-cad-crosshair ch-tr">+</div>
+                    <div class="card-cad-crosshair ch-bl">+</div>
+                    <div class="card-cad-crosshair ch-br">+</div>
+                </div>
+                <div class="card-badges-row">
+                                            <span class="kinetix-badge">ATHLETE PICK</span>
+                                    </div>
+            </div>
+            <div class="card-body-content">
+                <div class="card-meta-line">
+                    <span class="product-category">Women&#039;s Activewear</span>
+                    <span class="product-rating">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="#38bdf8"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <strong>5.0</strong>
+                        <span>(248)</span>
+                    </span>
+                </div>
+                <h3 class="product-title">AURA High-Rise Ribbed Leggings</h3>
+                <p class="product-subtitle">Squat-proof seamless circular knit with reinforced ribbing</p>
+                <div class="card-footer-action">
+                    <div class="price-box">
+                                                    <span class="regular-price">$78.00</span>
+                                            </div>
+                    <button type="button" class="btn-card-add kinetix-add-to-cart-trigger"
+                        data-product-id="aura-leggings"
+                        data-title="AURA High-Rise Ribbed Leggings"
+                        data-price="78.00"
+                        data-size="XS"
+                        data-color="Onyx Black">
+                        <span>Add</span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </article>
+        <article class="kinetix-product-card kinetix-card-shell kinetix-reveal" data-category="Gear &amp; Belts">
+        <div class="kinetix-card-inner">
+            <div class="card-media-wrapper">
+                <div class="kinetix-photo-frame">
+                    <img src="assets/images/product-titan-belt.jpg" alt="TITAN 10mm Lever Powerlifting Belt" class="kinetix-card-photo" loading="lazy">
+                    <div class="photo-ambient-vignette"></div>
+                    <div class="card-cad-crosshair ch-tl">+</div>
+                    <div class="card-cad-crosshair ch-tr">+</div>
+                    <div class="card-cad-crosshair ch-bl">+</div>
+                    <div class="card-cad-crosshair ch-br">+</div>
+                </div>
+                <div class="card-badges-row">
+                                            <span class="kinetix-badge">IPF READY</span>
+                                    </div>
+            </div>
+            <div class="card-body-content">
+                <div class="card-meta-line">
+                    <span class="product-category">Gear &amp; Belts</span>
+                    <span class="product-rating">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="#38bdf8"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <strong>4.95</strong>
+                        <span>(312)</span>
+                    </span>
+                </div>
+                <h3 class="product-title">TITAN 10mm Lever Powerlifting Belt</h3>
+                <p class="product-subtitle">Single-cut genuine steerhide &middot; Aircraft alloy lever clamp</p>
+                <div class="card-footer-action">
+                    <div class="price-box">
+                                                    <span class="regular-price">$119.00</span>
+                                            </div>
+                    <button type="button" class="btn-card-add kinetix-add-to-cart-trigger"
+                        data-product-id="titan-belt"
+                        data-title="TITAN 10mm Lever Powerlifting Belt"
+                        data-price="119.00"
+                        data-size="S"
+                        data-color="Onyx Black">
+                        <span>Add</span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </article>
+        <article class="kinetix-product-card kinetix-card-shell kinetix-reveal" data-category="Men&#039;s Training">
+        <div class="kinetix-card-inner">
+            <div class="card-media-wrapper">
+                <div class="kinetix-photo-frame">
+                    <img src="assets/images/product-apex-hoodie.jpg" alt="APEX Heavyweight French Terry Hoodie" class="kinetix-card-photo" loading="lazy">
+                    <div class="photo-ambient-vignette"></div>
+                    <div class="card-cad-crosshair ch-tl">+</div>
+                    <div class="card-cad-crosshair ch-tr">+</div>
+                    <div class="card-cad-crosshair ch-bl">+</div>
+                    <div class="card-cad-crosshair ch-br">+</div>
+                </div>
+                <div class="card-badges-row">
+                                            <span class="kinetix-badge">LIMITED DROP</span>
+                                    </div>
+            </div>
+            <div class="card-body-content">
+                <div class="card-meta-line">
+                    <span class="product-category">Men&#039;s Training</span>
+                    <span class="product-rating">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="#38bdf8"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <strong>4.85</strong>
+                        <span>(96)</span>
+                    </span>
+                </div>
+                <h3 class="product-title">APEX Heavyweight French Terry Hoodie</h3>
+                <p class="product-subtitle">480 GSM dense looped organic cotton warm-up pullover</p>
+                <div class="card-footer-action">
+                    <div class="price-box">
+                                                    <span class="regular-price">$98.00</span>
+                                            </div>
+                    <button type="button" class="btn-card-add kinetix-add-to-cart-trigger"
+                        data-product-id="apex-hoodie"
+                        data-title="APEX Heavyweight French Terry Hoodie"
+                        data-price="98.00"
+                        data-size="S"
+                        data-color="Onyx Black">
+                        <span>Add</span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </article>
+        <article class="kinetix-product-card kinetix-card-shell kinetix-reveal" data-category="Men&#039;s Training">
+        <div class="kinetix-card-inner">
+            <div class="card-media-wrapper">
+                <div class="kinetix-photo-frame">
+                    <img src="assets/images/product-vanguard-shorts.jpg" alt="VANGUARD 5&quot; Linerless Training Shorts" class="kinetix-card-photo" loading="lazy">
+                    <div class="photo-ambient-vignette"></div>
+                    <div class="card-cad-crosshair ch-tl">+</div>
+                    <div class="card-cad-crosshair ch-tr">+</div>
+                    <div class="card-cad-crosshair ch-bl">+</div>
+                    <div class="card-cad-crosshair ch-br">+</div>
+                </div>
+                <div class="card-badges-row">
+                                            <span class="kinetix-badge">HOT</span>
+                                    </div>
+            </div>
+            <div class="card-body-content">
+                <div class="card-meta-line">
+                    <span class="product-category">Men&#039;s Training</span>
+                    <span class="product-rating">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="#38bdf8"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <strong>4.9</strong>
+                        <span>(174)</span>
+                    </span>
+                </div>
+                <h3 class="product-title">VANGUARD 5&quot; Linerless Training Shorts</h3>
+                <p class="product-subtitle">4-way mechanical stretch nylon with zippered sweat-proof pocket</p>
+                <div class="card-footer-action">
+                    <div class="price-box">
+                                                    <span class="sale-price">$48.00</span>
+                            <span class="regular-price strike">$64.00</span>
+                                            </div>
+                    <button type="button" class="btn-card-add kinetix-add-to-cart-trigger"
+                        data-product-id="vanguard-shorts"
+                        data-title="VANGUARD 5&quot; Linerless Training Shorts"
+                        data-price="48.00"
+                        data-size="S"
+                        data-color="Onyx Black">
+                        <span>Add</span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </article>
+        <article class="kinetix-product-card kinetix-card-shell kinetix-reveal" data-category="Gear &amp; Belts">
+        <div class="kinetix-card-inner">
+            <div class="card-media-wrapper">
+                <div class="kinetix-photo-frame">
+                    <img src="assets/images/product-hydrate-shaker.jpg" alt="HYDRATE 24oz Insulated Steel Shaker" class="kinetix-card-photo" loading="lazy">
+                    <div class="photo-ambient-vignette"></div>
+                    <div class="card-cad-crosshair ch-tl">+</div>
+                    <div class="card-cad-crosshair ch-tr">+</div>
+                    <div class="card-cad-crosshair ch-bl">+</div>
+                    <div class="card-cad-crosshair ch-br">+</div>
+                </div>
+                <div class="card-badges-row">
+                                    </div>
+            </div>
+            <div class="card-body-content">
+                <div class="card-meta-line">
+                    <span class="product-category">Gear &amp; Belts</span>
+                    <span class="product-rating">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="#38bdf8"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <strong>4.8</strong>
+                        <span>(115)</span>
+                    </span>
+                </div>
+                <h3 class="product-title">HYDRATE 24oz Insulated Steel Shaker</h3>
+                <p class="product-subtitle">Vacuum double-wall 18/8 stainless steel &middot; Silent mesh agitator</p>
+                <div class="card-footer-action">
+                    <div class="price-box">
+                                                    <span class="regular-price">$38.00</span>
+                                            </div>
+                    <button type="button" class="btn-card-add kinetix-add-to-cart-trigger"
+                        data-product-id="hydrate-shaker"
+                        data-title="HYDRATE 24oz Insulated Steel Shaker"
+                        data-price="38.00"
+                        data-size="24oz"
+                        data-color="Onyx Black">
+                        <span>Add</span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </article>
+        <article class="kinetix-product-card kinetix-card-shell kinetix-reveal" data-category="Recovery Systems">
+        <div class="kinetix-card-inner">
+            <div class="card-media-wrapper">
+                <div class="kinetix-photo-frame">
+                    <img src="assets/images/product-pulse-whey.jpg" alt="PULSE Pure Whey Isolate (Vanilla Bean)" class="kinetix-card-photo" loading="lazy">
+                    <div class="photo-ambient-vignette"></div>
+                    <div class="card-cad-crosshair ch-tl">+</div>
+                    <div class="card-cad-crosshair ch-tr">+</div>
+                    <div class="card-cad-crosshair ch-bl">+</div>
+                    <div class="card-cad-crosshair ch-br">+</div>
+                </div>
+                <div class="card-badges-row">
+                                            <span class="kinetix-badge">CLEAN SPORT</span>
+                                    </div>
+            </div>
+            <div class="card-body-content">
+                <div class="card-meta-line">
+                    <span class="product-category">Recovery Systems</span>
+                    <span class="product-rating">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="#38bdf8"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <strong>4.95</strong>
+                        <span>(208)</span>
+                    </span>
+                </div>
+                <h3 class="product-title">PULSE Pure Whey Isolate (Vanilla Bean)</h3>
+                <p class="product-subtitle">27g cold-microfiltered protein &middot; Zero artificial sweeteners</p>
+                <div class="card-footer-action">
+                    <div class="price-box">
+                                                    <span class="regular-price">$54.00</span>
+                                            </div>
+                    <button type="button" class="btn-card-add kinetix-add-to-cart-trigger"
+                        data-product-id="pulse-whey"
+                        data-title="PULSE Pure Whey Isolate (Vanilla Bean)"
+                        data-price="54.00"
+                        data-size="2.2 lbs"
+                        data-color="Onyx Black">
+                        <span>Add</span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </article>
+        <article class="kinetix-product-card kinetix-card-shell kinetix-reveal" data-category="Recovery Systems">
+        <div class="kinetix-card-inner">
+            <div class="card-media-wrapper">
+                <div class="kinetix-photo-frame">
+                    <img src="assets/images/product-kinetic-gun.jpg" alt="KINETIC Deep-Tissue Massage Gun" class="kinetix-card-photo" loading="lazy">
+                    <div class="photo-ambient-vignette"></div>
+                    <div class="card-cad-crosshair ch-tl">+</div>
+                    <div class="card-cad-crosshair ch-tr">+</div>
+                    <div class="card-cad-crosshair ch-bl">+</div>
+                    <div class="card-cad-crosshair ch-br">+</div>
+                </div>
+                <div class="card-badges-row">
+                                            <span class="kinetix-badge">FLAGSHIP</span>
+                                    </div>
+            </div>
+            <div class="card-body-content">
+                <div class="card-meta-line">
+                    <span class="product-category">Recovery Systems</span>
+                    <span class="product-rating">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="#38bdf8"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <strong>4.9</strong>
+                        <span>(82)</span>
+                    </span>
+                </div>
+                <h3 class="product-title">KINETIC Deep-Tissue Massage Gun</h3>
+                <p class="product-subtitle">Brushless 16mm high-torque motor with 5 titanium head attachments</p>
+                <div class="card-footer-action">
+                    <div class="price-box">
+                                                    <span class="sale-price">$159.00</span>
+                            <span class="regular-price strike">$189.00</span>
+                                            </div>
+                    <button type="button" class="btn-card-add kinetix-add-to-cart-trigger"
+                        data-product-id="kinetic-gun"
+                        data-title="KINETIC Deep-Tissue Massage Gun"
+                        data-price="159.00"
+                        data-size="Kit Box"
+                        data-color="Onyx Black">
+                        <span>Add</span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </article>
+    
+            </div>
+        </div>
+    </div>
+</div></main><!-- #kinetix-main-content -->
+
+<!-- Athlete Value Proposition Bar -->
+<section class="kinetix-trust-bar">
+    <div class="kinetix-container">
+        <div class="trust-grid">
+            <div class="trust-item">
+                <span class="trust-icon-box">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
+                </span>
+                <div class="trust-info">
+                    <strong>Express Global Dispatch</strong>
+                    <span>Orders fulfilled within 24 hours from our logistics hub</span>
+                </div>
+            </div>
+            <div class="trust-item">
+                <span class="trust-icon-box">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg>
+                </span>
+                <div class="trust-info">
+                    <strong>30-Day Fit Guarantee</strong>
+                    <span>Complimentary exchanges and returns on unworn apparel</span>
+                </div>
+            </div>
+            <div class="trust-item">
+                <span class="trust-icon-box">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                </span>
+                <div class="trust-info">
+                    <strong>Shopify Encrypted Checkout</strong>
+                    <span>PCI Level-1 compliant transactions with Shop Pay and Apple Pay</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Main Brand Footer -->
+<footer id="kinetix-site-footer" class="kinetix-footer">
+    <div class="kinetix-container">
+        <div class="footer-primary-grid">
+            <div class="footer-col brand-col">
+                <a href="index.html" class="footer-logo">
+                    <span class="logo-mark">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                    </span>
+                    <span class="logo-text">KINETIX</span>
+                </a>
+                <p class="footer-bio">
+                    Technical athletic apparel, circular-knit compression wear, and competition equipment built for rigorous physical preparation.
+                </p>
+                <div class="footer-shopify-status">
+                    <span class="status-indicator"></span>
+                    <span>Shopify E-Commerce Verified</span>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-col-title">Apparel & Gear</h4>
+                <ul class="footer-link-list">
+                    <li><a href="shop.html">Men's Training</a></li>
+                    <li><a href="shop.html">Women's Active</a></li>
+                    <li><a href="shop.html">Base Layers & Compression</a></li>
+                    <li><a href="shop.html">10mm Tournament Belts</a></li>
+                    <li><a href="shop.html">Cold-Filtered Whey Isolate</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-col-title">Engineering Lab</h4>
+                <ul class="footer-link-list">
+                    <li><a href="technology.html">HydroShield Fabric Science</a></li>
+                    <li><a href="sizing.html">Size Guide & Fit Matrix</a></li>
+                    <li><a href="lookbook.html">Athlete Field Campaigns</a></li>
+                    <li><a href="about.html">Brand Heritage & Philosophy</a></li>
+                    <li><a href="contact.html">Athlete Concierge & Support</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col newsletter-col">
+                <h4 class="footer-col-title">Field Dispatch</h4>
+                <p class="newsletter-sub">
+                    Receive product release notices, fabric laboratory updates, and private subscriber allocations.
+                </p>
+                <form class="kinetix-newsletter-form" onsubmit="event.preventDefault(); this.querySelector('button').innerText = 'ENROLLED';">
+                    <div class="newsletter-form-group">
+                        <input type="email" placeholder="athlete@training.com" required aria-label="Email Address">
+                        <button type="submit" class="newsletter-btn">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom-bar">
+            <div class="footer-copy">
+                &copy; 2026 Kinetix Athletics Inc. All rights reserved. Dual compatibility with WordPress & Shopify.
+            </div>
+            <div class="footer-badges">
+                <span class="pay-badge">Shop Pay</span>
+                <span class="pay-badge">Apple Pay</span>
+                <span class="pay-badge">Google Pay</span>
+                <span class="pay-badge">Visa</span>
+                <span class="pay-badge">Mastercard</span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- SLIDE-OUT SHOPPING BAG DRAWER -->
+<div id="kinetix-cart-drawer" class="kinetix-drawer" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="kinetix-drawer-heading">
+    <div class="kinetix-drawer-backdrop" id="kinetix-drawer-backdrop"></div>
+    <div class="kinetix-drawer-panel">
+        <div class="kinetix-drawer-header">
+            <div class="drawer-heading-row">
+                <span class="heading-glyph">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                </span>
+                <h3 id="kinetix-drawer-heading" class="drawer-title">Shopping Bag</h3>
+                <span class="drawer-count-tag" id="kinetix-drawer-count">(0)</span>
+            </div>
+            <button type="button" class="drawer-close-btn" id="kinetix-close-bag" aria-label="Close bag">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+            </button>
+        </div>
+
+        <div class="kinetix-shipping-meter-wrap" id="kinetix-shipping-meter">
+            <div class="meter-text-row">
+                <span class="meter-msg" id="kinetix-meter-msg">Add $75.00 more for complimentary express delivery</span>
+                <span class="meter-pct" id="kinetix-meter-pct">0%</span>
+            </div>
+            <div class="meter-progress-track">
+                <div class="meter-progress-fill" id="kinetix-meter-bar" style="width: 0%;"></div>
+            </div>
+        </div>
+
+        <div class="kinetix-drawer-items" id="kinetix-drawer-items-list"></div>
+
+        <div class="kinetix-drawer-footer" id="kinetix-drawer-footer">
+            <div class="drawer-subtotal-line">
+                <span class="subtotal-label">Order Subtotal</span>
+                <span class="subtotal-val" id="kinetix-cart-subtotal">$0.00</span>
+            </div>
+            <p class="drawer-shipping-note">
+                Taxes, duties, and gift codes calculated at Shopify secure checkout.
+            </p>
+            <button type="button" class="kinetix-btn-checkout" id="kinetix-checkout-btn">
+                <span>Proceed to Shopify Checkout</span>
+                <span class="checkout-arrow">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </span>
+            </button>
+            <div class="drawer-security-row">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                <span>Encrypted 256-Bit SSL Shopify Payment Gateway</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Toast -->
+<div id="kinetix-toast" class="kinetix-toast" role="status" aria-live="polite">
+    <div class="toast-inner">
+        <span class="toast-bolt">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        </span>
+        <span class="toast-msg" id="kinetix-toast-msg">Item added to your bag</span>
+    </div>
+</div>
+
+<!-- JavaScript Engine -->
+<script src="assets/js/theme.js"></script>
+<script src="assets/js/cart-drawer.js"></script>
+</body>
+</html>
+    

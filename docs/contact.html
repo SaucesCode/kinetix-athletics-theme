@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Athlete Support &amp; Concierge &middot; Kinetix Athletics</title>
+    <meta name="description" content="High-performance athletic apparel, 10mm steerhide powerlifting belts, and circular-knit compression wear. Dual-platform Shopify checkout.">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="Kinetix Athletics">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Athlete Support &amp; Concierge &middot; Kinetix Athletics">
+    <meta property="og:description" content="High-performance athletic apparel, 10mm steerhide powerlifting belts, and circular-knit compression wear.">
+    <meta property="og:image" content="assets/images/hero-athlete.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="900">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@kinetixathletics">
+    <meta name="twitter:title" content="Athlete Support &amp; Concierge &middot; Kinetix Athletics">
+    <meta name="twitter:description" content="High-performance athletic apparel, 10mm steerhide powerlifting belts, and circular-knit compression wear.">
+    <meta name="twitter:image" content="assets/images/hero-athlete.jpg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="stylesheet" href="assets/css/cart-drawer.css">
+</head>
+<body class="kinetix-body">
+
+<a class="skip-link screen-reader-text" href="#kinetix-main-content">Skip to content</a>
+
+<!-- Announcement Bar -->
+<aside class="kinetix-ticker-bar" role="complementary" aria-label="Announcement">
+    <div class="kinetix-container ticker-inner">
+        <span class="ticker-badge">DISPATCH</span>
+        <div class="ticker-marquee-text">
+            Complimentary express delivery on domestic orders over $75 &middot; Use code FIRSTDROP at checkout
+        </div>
+        <button type="button" class="ticker-close" aria-label="Close banner" onclick="this.closest('.kinetix-ticker-bar').style.display='none'">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+    </div>
+</aside>
+
+<!-- Performance Fluid Island Navbar -->
+<header id="kinetix-site-header" class="kinetix-header-wrap">
+    <div class="kinetix-container">
+        <nav class="kinetix-navbar" aria-label="Main Navigation">
+            <!-- Brand Logo -->
+            <div class="kinetix-brand-area">
+                <a href="index.html" class="kinetix-logo" rel="home">
+                    <span class="logo-mark">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                    </span>
+                    <span class="logo-text">KINETIX</span>
+                    <span class="logo-sub">LAB</span>
+                </a>
+            </div>
+
+            <!-- Nav Links -->
+            <div class="kinetix-nav-links-wrap">
+                <ul class="kinetix-nav-list">
+                    <li><a href="shop.html" class="nav-link ">Shop</a></li>
+                    <li><a href="technology.html" class="nav-link ">Fabrics</a></li>
+                    <li><a href="lookbook.html" class="nav-link ">Lookbook</a></li>
+                    <li><a href="sizing.html" class="nav-link ">Size Guide</a></li>
+                    <li><a href="about.html" class="nav-link ">About</a></li>
+                    <li><a href="contact.html" class="nav-link active">Support</a></li>
+                </ul>
+            </div>
+
+            <!-- Actions: Bag Trigger & Mobile Menu -->
+            <div class="kinetix-header-actions">
+                <a href="shop.html" class="kinetix-icon-btn" aria-label="Search catalog">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                </a>
+
+                <!-- Shopping Bag Button -->
+                <button type="button" class="kinetix-bag-btn" id="kinetix-open-bag" aria-label="View shopping bag">
+                    <span class="bag-icon-circle">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                    </span>
+                    <span class="bag-label">Bag</span>
+                    <span class="bag-count-badge" id="kinetix-cart-count">0</span>
+                </button>
+
+                <!-- Mobile Menu Button -->
+                <button type="button" class="kinetix-hamburger" id="kinetix-mobile-btn" aria-label="Toggle navigation">
+                    <span class="h-bar top"></span>
+                    <span class="h-bar bottom"></span>
+                </button>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Mobile Navigation Overlay -->
+    <div id="kinetix-mobile-overlay" class="kinetix-mobile-nav" aria-hidden="true">
+        <ul class="mobile-links-list">
+            <li><a href="shop.html">Shop All Products</a></li>
+            <li><a href="technology.html">Fabric & Materials</a></li>
+            <li><a href="lookbook.html">Athlete Lookbook & Drops</a></li>
+            <li><a href="sizing.html">Size & Fit Guide</a></li>
+            <li><a href="about.html">About Kinetix</a></li>
+            <li><a href="contact.html">Customer Support & Exchanges</a></li>
+        </ul>
+        <div class="mobile-nav-note">
+            <span>Shopify 256-bit Encrypted Checkout Protection</span>
+        </div>
+    </div>
+</header>
+
+<main id="kinetix-main-content" class="kinetix-main">
+    
+<div class="kinetix-contact-page">
+    <div class="kinetix-container">
+        <nav class="kinetix-breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html">Home</a>
+            <span class="sep">/</span>
+            <span class="current">Athlete Concierge & Support</span>
+        </nav>
+        <header class="kinetix-page-header contact-header kinetix-reveal">
+            <div class="page-hero-eyebrow">
+                <span class="eyebrow-kicker">ATHLETE CONCIERGE</span>
+                <span class="eyebrow-divider">/</span>
+                <span class="eyebrow-meta">SUPPORT & EXCHANGES</span>
+            </div>
+            <h1 class="page-title">Athlete Support & Order Help</h1>
+            <p class="page-lead">
+                Get help with sizing, order tracking, and 30-day exchanges. Our dedicated support team responds within 4 hours.
+            </p>
+        </header>
+
+        <div class="concierge-service-grid kinetix-reveal">
+            <div class="concierge-service-card doppelrand-card">
+                <div class="service-icon-box">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
+                </div>
+                <h3 class="service-title">Shopify Order Tracking</h3>
+                <p class="service-desc">Check real-time package delivery milestones and carrier tracking numbers for your order.</p>
+                <form class="order-lookup-form" onsubmit="event.preventDefault(); document.getElementById('track-result').style.display='block';">
+                    <div class="lookup-input-row">
+                        <input type="text" placeholder="Order # (e.g. KX-84920)" required>
+                        <button type="submit" class="lookup-btn" aria-label="Track package">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                        </button>
+                    </div>
+                    <div id="track-result" class="track-status-box" style="display:none;">
+                        <div class="track-status-header">
+                            <span class="track-dot"></span>
+                            <span>DISPATCHED &middot; IN TRANSIT</span>
+                        </div>
+                        <div class="track-details">
+                            <div class="track-row"><span>Carrier:</span> <strong>FedEx Priority Express</strong></div>
+                            <div class="track-row"><span>Est. Delivery:</span> <strong>Within 48 Hours</strong></div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="concierge-service-card doppelrand-card">
+                <div class="service-icon-box">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg>
+                </div>
+                <h3 class="service-title">30-Day Fit Exchanges</h3>
+                <p class="service-desc">Initiate an instant exchange for an adjacent size on unworn gear. Pre-paid label generated instantly.</p>
+                <a href="sizing.html" class="kinetix-btn-secondary" style="width:100%; justify-content:center;">View Sizing Protocol</a>
+            </div>
+
+            <div class="concierge-service-card doppelrand-card">
+                <div class="service-icon-box">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                </div>
+                <h3 class="service-title">Direct Concierge Desk</h3>
+                <p class="service-desc">Have a technical fabric question or custom team roster order? Contact our support staff.</p>
+                <div style="font-family:var(--font-mono); font-size:0.8125rem; color:var(--accent-primary); font-weight:700;">concierge@kinetixathletics.com</div>
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <section class="kinetix-faq-section kinetix-reveal">
+            <div class="section-title-wrap text-center" style="margin-bottom:2.5rem;">
+                <span class="section-kicker">RAPID RESOLUTION</span>
+                <h2 class="section-heading" style="font-family:var(--font-display); font-size:2rem; font-weight:800; color:var(--text-primary);">Frequently Addressed Questions</h2>
+            </div>
+            <div class="faq-accordion-list">
+                <details class="faq-item doppelrand-card" open>
+                    <summary class="faq-summary">
+                        <span>How does the 30-Day Fit Guarantee function for compression apparel?</span>
+                        <svg class="faq-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                    </summary>
+                    <div class="faq-body">
+                        <p>We encourage trying your compression garments in your training environment. If the compression gradient feels either too compressive or insufficient, we provide an instant pre-paid digital exchange label for the adjacent size. Garments must be unwashed with original tags intact.</p>
+                    </div>
+                </details>
+                <details class="faq-item doppelrand-card">
+                    <summary class="faq-summary">
+                        <span>What does the TITAN 10mm Lever Belt Lifetime Warranty cover?</span>
+                        <svg class="faq-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                    </summary>
+                    <div class="faq-body">
+                        <p>The magnesium-zinc alloy quick-flick lever mechanism and top-grain steerhide structure are warranted against structural breakage, stripping, or mechanical failure indefinitely under normal barbell and lifting usage. We replace any damaged lever clamp free of charge.</p>
+                    </div>
+                </details>
+                <details class="faq-item doppelrand-card">
+                    <summary class="faq-summary">
+                        <span>Can I sync my order with Shopify Shop Pay and Apple Pay?</span>
+                        <svg class="faq-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                    </summary>
+                    <div class="faq-body">
+                        <p>Yes. Our e-commerce bridge connects directly to Shopify PCI Level-1 certified infrastructure. You can check out with one click using Shop Pay, Apple Pay, Google Pay, or any major credit card, complete with end-to-end delivery tracking inside the Shop app.</p>
+                    </div>
+                </details>
+            </div>
+        </section>
+    </div>
+</div></main><!-- #kinetix-main-content -->
+
+<!-- Athlete Value Proposition Bar -->
+<section class="kinetix-trust-bar">
+    <div class="kinetix-container">
+        <div class="trust-grid">
+            <div class="trust-item">
+                <span class="trust-icon-box">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
+                </span>
+                <div class="trust-info">
+                    <strong>Express Global Dispatch</strong>
+                    <span>Orders fulfilled within 24 hours from our logistics hub</span>
+                </div>
+            </div>
+            <div class="trust-item">
+                <span class="trust-icon-box">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg>
+                </span>
+                <div class="trust-info">
+                    <strong>30-Day Fit Guarantee</strong>
+                    <span>Complimentary exchanges and returns on unworn apparel</span>
+                </div>
+            </div>
+            <div class="trust-item">
+                <span class="trust-icon-box">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                </span>
+                <div class="trust-info">
+                    <strong>Shopify Encrypted Checkout</strong>
+                    <span>PCI Level-1 compliant transactions with Shop Pay and Apple Pay</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Main Brand Footer -->
+<footer id="kinetix-site-footer" class="kinetix-footer">
+    <div class="kinetix-container">
+        <div class="footer-primary-grid">
+            <div class="footer-col brand-col">
+                <a href="index.html" class="footer-logo">
+                    <span class="logo-mark">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                    </span>
+                    <span class="logo-text">KINETIX</span>
+                </a>
+                <p class="footer-bio">
+                    Technical athletic apparel, circular-knit compression wear, and competition equipment built for rigorous physical preparation.
+                </p>
+                <div class="footer-shopify-status">
+                    <span class="status-indicator"></span>
+                    <span>Shopify E-Commerce Verified</span>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-col-title">Apparel & Gear</h4>
+                <ul class="footer-link-list">
+                    <li><a href="shop.html">Men's Training</a></li>
+                    <li><a href="shop.html">Women's Active</a></li>
+                    <li><a href="shop.html">Base Layers & Compression</a></li>
+                    <li><a href="shop.html">10mm Tournament Belts</a></li>
+                    <li><a href="shop.html">Cold-Filtered Whey Isolate</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-col-title">Engineering Lab</h4>
+                <ul class="footer-link-list">
+                    <li><a href="technology.html">HydroShield Fabric Science</a></li>
+                    <li><a href="sizing.html">Size Guide & Fit Matrix</a></li>
+                    <li><a href="lookbook.html">Athlete Field Campaigns</a></li>
+                    <li><a href="about.html">Brand Heritage & Philosophy</a></li>
+                    <li><a href="contact.html">Athlete Concierge & Support</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col newsletter-col">
+                <h4 class="footer-col-title">Field Dispatch</h4>
+                <p class="newsletter-sub">
+                    Receive product release notices, fabric laboratory updates, and private subscriber allocations.
+                </p>
+                <form class="kinetix-newsletter-form" onsubmit="event.preventDefault(); this.querySelector('button').innerText = 'ENROLLED';">
+                    <div class="newsletter-form-group">
+                        <input type="email" placeholder="athlete@training.com" required aria-label="Email Address">
+                        <button type="submit" class="newsletter-btn">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom-bar">
+            <div class="footer-copy">
+                &copy; 2026 Kinetix Athletics Inc. All rights reserved. Dual compatibility with WordPress & Shopify.
+            </div>
+            <div class="footer-badges">
+                <span class="pay-badge">Shop Pay</span>
+                <span class="pay-badge">Apple Pay</span>
+                <span class="pay-badge">Google Pay</span>
+                <span class="pay-badge">Visa</span>
+                <span class="pay-badge">Mastercard</span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- SLIDE-OUT SHOPPING BAG DRAWER -->
+<div id="kinetix-cart-drawer" class="kinetix-drawer" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="kinetix-drawer-heading">
+    <div class="kinetix-drawer-backdrop" id="kinetix-drawer-backdrop"></div>
+    <div class="kinetix-drawer-panel">
+        <div class="kinetix-drawer-header">
+            <div class="drawer-heading-row">
+                <span class="heading-glyph">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                </span>
+                <h3 id="kinetix-drawer-heading" class="drawer-title">Shopping Bag</h3>
+                <span class="drawer-count-tag" id="kinetix-drawer-count">(0)</span>
+            </div>
+            <button type="button" class="drawer-close-btn" id="kinetix-close-bag" aria-label="Close bag">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+            </button>
+        </div>
+
+        <div class="kinetix-shipping-meter-wrap" id="kinetix-shipping-meter">
+            <div class="meter-text-row">
+                <span class="meter-msg" id="kinetix-meter-msg">Add $75.00 more for complimentary express delivery</span>
+                <span class="meter-pct" id="kinetix-meter-pct">0%</span>
+            </div>
+            <div class="meter-progress-track">
+                <div class="meter-progress-fill" id="kinetix-meter-bar" style="width: 0%;"></div>
+            </div>
+        </div>
+
+        <div class="kinetix-drawer-items" id="kinetix-drawer-items-list"></div>
+
+        <div class="kinetix-drawer-footer" id="kinetix-drawer-footer">
+            <div class="drawer-subtotal-line">
+                <span class="subtotal-label">Order Subtotal</span>
+                <span class="subtotal-val" id="kinetix-cart-subtotal">$0.00</span>
+            </div>
+            <p class="drawer-shipping-note">
+                Taxes, duties, and gift codes calculated at Shopify secure checkout.
+            </p>
+            <button type="button" class="kinetix-btn-checkout" id="kinetix-checkout-btn">
+                <span>Proceed to Shopify Checkout</span>
+                <span class="checkout-arrow">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </span>
+            </button>
+            <div class="drawer-security-row">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                <span>Encrypted 256-Bit SSL Shopify Payment Gateway</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Toast -->
+<div id="kinetix-toast" class="kinetix-toast" role="status" aria-live="polite">
+    <div class="toast-inner">
+        <span class="toast-bolt">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        </span>
+        <span class="toast-msg" id="kinetix-toast-msg">Item added to your bag</span>
+    </div>
+</div>
+
+<!-- JavaScript Engine -->
+<script src="assets/js/theme.js"></script>
+<script src="assets/js/cart-drawer.js"></script>
+</body>
+</html>
+    
